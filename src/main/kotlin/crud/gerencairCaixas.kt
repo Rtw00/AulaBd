@@ -1,5 +1,6 @@
 package crud
 
+import entidades.CaixaDAgua
 import enumeradores.Material
 
 fun cadastrarCaixa(){
@@ -26,7 +27,37 @@ fun cadastrarCaixa(){
         else -> material = Material.PLASTICO
     }
     println("capacidade da caixa em Litros")
+    val litros = readln().toDouble()
 
+    println("Cor da caixa")
+    val cor = readln().toString()
+
+    println("Peso da caixa")
+    val peso = readln().toDouble()
+
+    println("Preco da caixa")
+    val preco= readln().toBigDecimal()
+
+    println("Altura da Caixa")
+    val altura = readln().toDouble()
+
+    println("Profundidade Caixa")
+    val profundidade = readln().toDouble()
+
+    println("Largura da caixa")
+    val largura = readln().toDouble()
+
+    CaixaDAgua(
+        material = material,
+        capacidade = litros,
+        cor = cor,
+        peso = peso,
+        preco = preco,
+        altura = altura,
+        profundidade = profundidade,
+        largura = largura,
+
+    )
 }
 fun editarCaixa(){
 
